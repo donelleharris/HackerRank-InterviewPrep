@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Repeated String</title>
+</head>
+<body>
+	<h1>Repeated String</h1>
+	<script>
+		'use strict';
+
+		function repeatedString(s, n) {
+		    const count = str => str.split('').filter(char => char === 'a').length
+		    return (
+		        count(s) * Math.floor(n/s.length) + 
+		        count(s.substring(0, n % s.length))
+		        );
+		}
+
+		repeatedString();
+	</script>
+</body>
+</html>

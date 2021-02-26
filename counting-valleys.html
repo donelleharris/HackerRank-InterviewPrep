@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Counting Valleys</title>
+</head>
+<body>
+	<h1>Counting Valleys</h1>
+	<script>
+		function countingValleys(steps, path) {
+		    let elevation = 0;
+		    let inValley = false;
+		    let valleyCount = 0;
+		    let walk = path.split("");
+		    for(let i = 0; i < steps; i++){
+		    	if(walk[i] === "U"){
+		        	elevation += 1;
+		        } else {
+		            elevation -= 1;
+		        }
+		        if(elevation < 0 && inValley == false){
+		            valleyCount += 1;
+		            inValley = true;
+		        } 
+		        if(elevation >= 0 && inValley == true){
+		            inValley = false;
+		        }
+		    }
+		   
+		    return valleyCount;
+
+		}
+		countingValleys(8, "UDDDUDUU");
+	</script>
+</body>
+</html>

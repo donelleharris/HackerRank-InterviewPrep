@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Jumping Clouds</title>
+</head>
+<body>
+	<h1>Jumping Clouds</h1>
+	<script>
+		function jumpingOnClouds(c) {
+		    let jumps = 0;
+		   
+		    let i = 0;
+		    while(i != c.length-1){
+		        if(c[i+2] === 0 && i <= c.length - 3){
+		            i += 2;
+		        } else {
+		            i += 1;
+		        }
+		        jumps += 1;
+		        
+		    } 
+		    
+		    return jumps;
+		}
+		jumpingOnClouds([0, 0, 1, 0, 0, 1, 0])
+	</script>
+</body>
+</html>
