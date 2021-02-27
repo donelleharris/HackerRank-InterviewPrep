@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Minimum Swaps 2</title>
+</head>
+<body>
+	<h1>Minimum Swaps 2</h1>
+	<script>
+		function minimumSwaps(arr) {
+		    let swaps = 0;
+		    for (let i = 0; i < arr.length; i++){
+		        while(i + 1 != arr[i]){
+		            let swapIndex = arr[i]-1;
+		            let valAtIndex = arr[i];
+		            let valAtSwapIndex = arr[swapIndex];
+		            arr[i] = valAtSwapIndex;
+		            arr[swapIndex] = valAtIndex;
+		            swaps++;
+		        }
+		    }
+		    return swaps;
+		}
+	</script>
+</body>
+</html>

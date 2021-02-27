@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>2D Array DS</title>
+</head>
+<body>
+    <h1>2D Array DS</h1>
+    <script>
+        function hourglassSum(arr) {
+            let rows = arr.length;
+            let columns = arr[0].length;
+            let maxSum = -63;
+            for(let i = 0; i < rows-2; i++){
+                for(let j = 0; j < columns-2; j++){
+                    let hourglassSum = arr[i][j] + arr[i][j+1] + arr[i][j+2]
+                                        + arr[i+1][j+1]
+                                        + arr[i+2][j] + arr[i+2][j+1] + arr[i+2][j+2];
+                    maxSum = Math.max(maxSum, hourglassSum);
+                }
+            }
+            return maxSum;
+
+        }
+    </script>
+</body>
+</html>
+

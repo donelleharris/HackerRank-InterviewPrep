@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Left Rotate</title>
+</head>
+<body>
+	<h1>Left Rotate</h1>
+	<script>
+		function rotLeft(a, d) {
+		    let size = a.length;
+		    let rotatedArr = new Array(size);
+		    let i = 0;
+		    let rotateIndex = d;
+		    while(rotateIndex < size){
+		        rotatedArr[i] = a[rotateIndex];
+		        i++;
+		        rotateIndex++;
+		    }
+		    rotateIndex = 0;
+		    while(rotateIndex < d){
+		        rotatedArr[i] = a[rotateIndex];
+		        i++;
+		        rotateIndex++;
+		    }
+		    return rotatedArr;
+		}
+	</script>
+</body>
+</html>
